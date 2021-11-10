@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/2021-devday/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/2021-devday/static/js/main.afb13cd8.chunk.js",
-    "main.js.map": "/2021-devday/static/js/main.afb13cd8.chunk.js.map",
+    "main.css": "/2021-devday/static/css/main.cf88d310.chunk.css",
+    "main.js": "/2021-devday/static/js/main.be183555.chunk.js",
+    "main.js.map": "/2021-devday/static/js/main.be183555.chunk.js.map",
     "runtime-main.js": "/2021-devday/static/js/runtime-main.82bf33a2.js",
     "runtime-main.js.map": "/2021-devday/static/js/runtime-main.82bf33a2.js.map",
     "static/js/2.ce96eda5.chunk.js": "/2021-devday/static/js/2.ce96eda5.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.459de8b5.chunk.js": "/2021-devday/static/js/3.459de8b5.chunk.js",
     "static/js/3.459de8b5.chunk.js.map": "/2021-devday/static/js/3.459de8b5.chunk.js.map",
     "index.html": "/2021-devday/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/2021-devday/static/css/main.6dea0f05.chunk.css.map",
+    "static/css/main.cf88d310.chunk.css.map": "/2021-devday/static/css/main.cf88d310.chunk.css.map",
     "static/js/2.ce96eda5.chunk.js.LICENSE.txt": "/2021-devday/static/js/2.ce96eda5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.82bf33a2.js",
     "static/js/2.ce96eda5.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.afb13cd8.chunk.js"
+    "static/css/main.cf88d310.chunk.css",
+    "static/js/main.be183555.chunk.js"
   ]
 }
