@@ -25,6 +25,6 @@ code {
 .mouse-trail {
   position: absolute;
   color: red;
-  animation: spin-mouse-trail infinite 10s linear;
+  animation: spin-mouse-trail infinite 5s linear;
 
 }

@@ -20,7 +20,7 @@ const Dot = function () {
   this.node = (function () {
     const n = document.createElement("div");
     n.className = 'mouse-trail';
-    n.innerText = '크몽 데브데이에 오신것을\n진심으로 환영합니다~';
+    n.innerText = '환영합니다~';
     document.body.appendChild(n);
     return n;
   }());
