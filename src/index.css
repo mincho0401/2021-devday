@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@keyframes spin-mouse-trail {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.mouse-trail {
+  position: absolute;
+  color: red;
+  animation: spin-mouse-trail infinite 10s linear;
+
+}
