@@ -24,21 +24,17 @@ export const colors = {
     red: '\x1b[1;31m',
     white: '\x1b[37m',
 };
-export const NOT_FOUND = (command: string) => `${colors.red} Usage Error ${RESET_COLOR} Command "${command}" not found.\r\n\r\nUsage: devday <command>\r\n\r\nwhere <command> is one of:\n\r    start, readme, exit`;
+export const NOT_FOUND = (command: string) => `\n\r${colors.red}Usage Error ${RESET_COLOR} Command "${command}" not found.\r\n\r\nUsage: devday <command>\r\n\r\nwhere <command> is one of:\n\r    start, readme`;
 export const SHOW_HELP = 'devday --help     display full usage info';
 
 export const HELP_LIST = [{
-    command: 'start',
-    description: ' join devday',
+    command: 'devday start',
+    description: ' ---- join devday',
     url: 'https://gather.town/app/AncfUoSib6cE7E1i/kmong',
 }, {
-    command: 'readme',
-    description: 'visit notion',
+    command: 'devday readme',
+    description: '---- visit notion',
     url: 'https://kmong.com'
-}, {
-    command: 'exit',
-    description: '  join devday',
-    url: '',
 }] as const;
 
 export const WITH_PROMPT = '\r\n$ ';
