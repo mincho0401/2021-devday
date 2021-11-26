@@ -20,23 +20,6 @@ function DevDayPage() {
   }, [writeTerminal]);
 
   useEffect(() => {
-    // Creates the Dot objects, populates the dots array
-    for (let i = 0; i < 1; i++) {
-      const d = new Dot();
-      dots.push(d);
-    }
-    // And get it started by calling animate().
-    animate();
-
-    addEventListener("mousemove", function (event) {
-      console.log('mouse', mouse.x);
-      //event.preventDefault();
-      mouse.x = event.pageX;
-      mouse.y = event.pageY;
-    });
-  }, []);
-
-  useEffect(() => {
     loadAddons();
     focus();
     welcomeTyped();
@@ -195,7 +178,7 @@ function DevDayPage() {
     }
   }, [asyncTyped, input, writeTerminal]);
 
-  const onChange = useCallback((data) => {
+  const handleChangeCLI = useCallback((data) => {
     if (!enabled) {
       return;
     }
@@ -235,7 +218,7 @@ function DevDayPage() {
       <XTerm
         ref={xtermRef}
         options={{ cursorBlink: enabled }}
-        onData={onChange}
+        onData={handleChangeCLI}
       />
     </main>
   );
@@ -250,60 +233,5 @@ const styles = {
     minHeight: '100vh',
   }
 };
-
-// dots is an array of Dot objects,
-// mouse is an object used to track the X and Y position
-// of the mouse, set with a mousemove event listener below
-const dots = [];
-const mouse = {
-  x: 0,
-  y: 0
-};
-
-// The Dot object used to scaffold the dots
-const Dot = function () {
-  this.x = 0;
-  this.y = 0;
-  this.node = (function () {
-    const n = document.createElement("div");
-    n.className = 'mouse-trail';
-    n.innerText = '환영합니다~';
-    document.body.appendChild(n);
-    return n;
-  }());
-};
-// The Dot.prototype.draw() method sets the position of 
-// the object's <div> node
-Dot.prototype.draw = function () {
-  this.node.style.left = this.x + "px";
-  this.node.style.top = this.y + "px";
-};
-
-// This is the screen redraw function
-function draw() {
-  // Make sure the mouse position is set everytime
-  // draw() is called.
-  let x = mouse.x;
-  let y = mouse.y;
-
-  // This loop is where all the 90s magic happens
-  dots.forEach(function (dot, index, dots) {
-    const nextDot = dots[index + 1] || dots[0];
-
-    dot.x = x;
-    dot.y = y;
-    dot.draw();
-    x += (nextDot.x - dot.x) * .7;
-    y += (nextDot.y - dot.y) * .7;
-
-  });
-}
-
-// animate() calls draw() then recursively calls itself
-// everytime the screen repaints via requestAnimationFrame().
-function animate() {
-  draw();
-  requestAnimationFrame(animate);
-}
 
 export default DevDayPage;
