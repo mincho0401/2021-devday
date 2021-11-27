@@ -163,7 +163,7 @@ function DevDayPage() {
       writeTerminal('\r\n');
       writeTerminal(`${colors.blue}bk               edgar               daniel`);
       writeTerminal('\r\n');
-      writeTerminal(`mincho            vigli               nadia${colors.white}`);
+      writeTerminal(`mincho           vigli               nadia${colors.white}`);
       writeTerminal('\r\n');
     }
 
@@ -285,7 +285,7 @@ function DevDayPage() {
       await asyncTyped('뿅 !! (〜￣▽￣)〜', 550);
       await asyncTyped('\r\n', 150);
       writeTerminal('\r\n');
-      asyncTyped('press devday --help to show menu\n\r');
+      writeTerminal('press devday --help to show menu\n\r');
 
   }
 
