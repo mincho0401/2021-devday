@@ -71,15 +71,19 @@ function DevDayPage() {
         }
 
         clearTerminal();
+        await asyncTyped(' ', 500);
         writeTerminal('\r\n');
         writeTerminal('\r\n');
 
         writeTerminal('\r\t*************	 Kmong DevDay	 *************\n');
+        await asyncTyped(' ', 750);
         writeTerminal(`\r\t\t      일정표 D-${day} (12/16)\n`);
+        await asyncTyped(' ', 250);
 
         writeTerminal('\r\n');
         writeTerminal('\r\n');
 
+        await asyncTyped(' ', 550);
         writeTerminal('\r\t1부\n');
         writeTerminal('\r\t\t14:00 - 14:30   ooo  [주제 주제 주제]\n');
         writeTerminal('\r\t\t14:40 - 15:10   ooo  [주제 주제 주제]\n');
@@ -89,12 +93,14 @@ function DevDayPage() {
         writeTerminal('\r\n');
         writeTerminal('\r\n');
 
+        await asyncTyped(' ', 550);
         writeTerminal('\r\t쉬는 시간\n');
         writeTerminal('\r\t\t15:50 - 16:10    쉬고 오셔용 (｡•̀ᴗ-)✧ (찡긋-☆)\n');
 
         writeTerminal('\r\n');
         writeTerminal('\r\n');
 
+        await asyncTyped(' ', 550);
         writeTerminal('\r\t2부\n');
         writeTerminal('\r\t\t16:10 - 16:40    ooo [주제 주제 주제]\n');
         writeTerminal('\r\t\t16:50 - 17:20    ooo [주제 주제 주제]\n');
@@ -113,7 +119,22 @@ function DevDayPage() {
       case 'cd bk':
       case 'cd edgar':
       case 'cd daniel':
-      case 'cd mincho':
+      case 'cd mincho': {
+
+      await asyncTyped('', 500);
+      await asyncTyped('안');
+      await asyncTyped('녕');
+      await asyncTyped('하');
+      await asyncTyped('세');
+      await asyncTyped('요', 150);
+      await asyncTyped('.', 150);
+      await asyncTyped('.', 150);
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('이 글을 보고 있다면 ... ', 150);
+
+
+        break;
+      }
       case 'cd vigli': {
         const person = input.split(' ')[1] ?? '';
         if (person === '' || person === '..') {
