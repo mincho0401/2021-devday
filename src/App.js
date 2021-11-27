@@ -58,6 +58,49 @@ function DevDayPage() {
   const pressEnterKey = useCallback(() => {
     switch (input) {
       case '': {
+
+
+        // D-day 계산
+        const setDay = new Date("2021-12-16:23:59:59+0900");
+        const now = new Date();
+        const distance = setDay.getTime() - now.getTime();
+        let day = Math.floor(distance/(1000*60*60*24));
+
+        if (day == 0) {
+          day = 'DAY';
+        }
+
+        clearTerminal();
+        writeTerminal('\r\n');
+        writeTerminal('\r\n');
+
+        writeTerminal('\r\t*************	 Kmong DevDay	 *************\n');
+        writeTerminal(`\r\t\t      일정표 D-${day} (12/16)\n`);
+
+        writeTerminal('\r\n');
+        writeTerminal('\r\n');
+
+        writeTerminal('\r\t1부\n');
+        writeTerminal('\r\t\t14:00 - 14:30   ooo  [주제 주제 주제]\n');
+        writeTerminal('\r\t\t14:40 - 15:10   ooo  [주제 주제 주제]\n');
+        writeTerminal('\r\t\t15:20 - 15:50   ooo  [주제 주제 주제]\n');
+        
+
+        writeTerminal('\r\n');
+        writeTerminal('\r\n');
+
+        writeTerminal('\r\t쉬는 시간\n');
+        writeTerminal('\r\t\t15:50 - 16:10    쉬고 오셔용 (｡•̀ᴗ-)✧ (찡긋-☆)\n');
+
+        writeTerminal('\r\n');
+        writeTerminal('\r\n');
+
+        writeTerminal('\r\t2부\n');
+        writeTerminal('\r\t\t16:10 - 16:40    ooo [주제 주제 주제]\n');
+        writeTerminal('\r\t\t16:50 - 17:20    ooo [주제 주제 주제]\n');
+        writeTerminal('\r\t\t17:30 - 18:00    ooo [주제 주제 주제]\n');
+
+
         break;
       }
       case 'ls': {
@@ -80,6 +123,7 @@ function DevDayPage() {
         }
         break;
       }
+      case 'cd nadia':
       case 'show me the money': {
         writeTerminal('\r\n');
         writeTerminal('10,000');
@@ -135,7 +179,7 @@ function DevDayPage() {
       writeTerminal('\r\n');
       writeTerminal('bk                edgar               daniel');
       writeTerminal('\r\n');
-      writeTerminal('mincho            vigli');
+      writeTerminal('mincho            vigli               nadia');
       writeTerminal('\r\n');
     }
 
