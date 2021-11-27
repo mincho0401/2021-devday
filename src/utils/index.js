@@ -23,6 +23,7 @@ export const RESET_COLOR = '\u001b[0m';
 export const colors = {
     red: '\x1b[1;31m',
     white: '\x1b[37m',
+    blue: '\x1b[36;1m',
 };
 export const NOT_FOUND = (command) => `\n\r${colors.red}Usage Error ${RESET_COLOR} Command "${command}" not found.\r\n\r\nUsage: devday <command>\r\n\r\nwhere <command> is one of:\n\r    start, readme`;
 export const SHOW_HELP = 'devday --help     display full usage info';

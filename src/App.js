@@ -161,9 +161,9 @@ function DevDayPage() {
 
     function writeLs() {
       writeTerminal('\r\n');
-      writeTerminal('bk                edgar               daniel');
+      writeTerminal(`${colors.blue}bk${colors.white}                ${colors.blue}edgar${colors.white}               ${colors.blue}daniel${colors.white}`);
       writeTerminal('\r\n');
-      writeTerminal('mincho            vigli               nadia');
+      writeTerminal(`${colors.blue}mincho${colors.white}            ${colors.blue}vigli${colors.white}               ${colors.blue}nadia${colors.white}`);
       writeTerminal('\r\n');
     }
 
@@ -220,20 +220,19 @@ function DevDayPage() {
   }, [asyncTyped, input, writeTerminal]);
 
   async function writeSchedule(day) {
-    await asyncTyped('', 500);
-    writeTerminal('\r\n');
-    writeTerminal('\r\n');
-
-    writeTerminal('\r\t*************	 Kmong DevDay	 *************\n');
-    await asyncTyped('', 750);
-    writeTerminal(`\r\t\t      일정표 D-${day} (12/16)\n`);
-    await asyncTyped('', 250);
 
     writeTerminal('\r\n');
     writeTerminal('\r\n');
 
-    await asyncTyped('', 550);
-    writeTerminal('\r\t1부\n');
+    await asyncTyped('\r\t*************	 Kmong DevDay	 *************\n', 100);
+    writeTerminal('\r\n');
+    await asyncTyped(`\r\t\t      일정표 D-${day} (12/16)\n`, 120);
+
+    writeTerminal('\r\n');
+    writeTerminal('\r\n');
+
+    await asyncTyped('\r\t1', 100);
+    await asyncTyped('부\n', 200);
     writeTerminal('\r\t\t14:00 - 14:30   ooo  [주제 주제 주제]\n');
     writeTerminal('\r\t\t14:40 - 15:10   ooo  [주제 주제 주제]\n');
     writeTerminal('\r\t\t15:20 - 15:50   ooo  [주제 주제 주제]\n');
@@ -242,22 +241,24 @@ function DevDayPage() {
     writeTerminal('\r\n');
     writeTerminal('\r\n');
 
-    await asyncTyped('', 550);
-    writeTerminal('\r\t쉬는 시간\n');
+    await asyncTyped('\r\t쉬', 100);
+    await asyncTyped('는', 120);
+    await asyncTyped('시', 150);
+    await asyncTyped('간\n', 180);
     writeTerminal('\r\t\t15:50 - 16:10    쉬고 오셔용 (｡•̀ᴗ-)✧ (찡긋-☆)\n');
 
     writeTerminal('\r\n');
     writeTerminal('\r\n');
 
-    await asyncTyped('', 550);
-    writeTerminal('\r\t2부\n');
+    await asyncTyped('\r\t2', 150);
+    await asyncTyped('부\n', 200);
     writeTerminal('\r\t\t16:10 - 16:40    ooo [주제 주제 주제]\n');
     writeTerminal('\r\t\t16:50 - 17:20    ooo [주제 주제 주제]\n');
     writeTerminal('\r\t\t17:30 - 18:00    ooo [주제 주제 주제]\n');
 
     writeTerminal('\r\n');
-    asyncTyped('press devday --help to show menu\n\r');
     writeTerminal('\r\n');
+    writeTerminal('\r\npress devday --help to show menu\n\r');
   }
 
   // 이런식으로 소감 넣어도 좋을것 같아용
