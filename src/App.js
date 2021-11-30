@@ -90,11 +90,28 @@ function DevDayPage() {
       }
       case 'cd bk':
       case 'cd edgar':
-      case 'cd daniel':
+      case 'cd daniel': {
+
+        const person = input.split(' ')[1] ?? '';
+        if (person === '' || person === '..') {
+          writeNoSuchCd();
+        } else {
+          clearTerminal();
+          writeDanieL();
+        }
+
+        break;
+        
+      }
       case 'cd mincho': {
 
-        clearTerminal();
-        writeMincho();
+        const person = input.split(' ')[1] ?? '';
+        if (person === '' || person === '..') {
+          writeNoSuchCd();
+        } else {
+          clearTerminal();
+          writeMincho();
+        }
 
         break;
       }
@@ -103,6 +120,7 @@ function DevDayPage() {
         if (person === '' || person === '..') {
           writeNoSuchCd();
         } else {
+          clearTerminal();
           writeVigli();
         }
         break;
@@ -294,7 +312,7 @@ function DevDayPage() {
 
       await asyncTyped('', 500);
       await asyncTyped('\r\n', 150);
-      await asyncTyped('Daniel', 50);
+      await asyncTyped('DanieL', 50);
       await asyncTyped(' bk', 200);
       await asyncTyped(' Mincho', 200);
       await asyncTyped(' Bong', 200);
@@ -319,6 +337,30 @@ function DevDayPage() {
       writeTerminal('\r\n');
       writeTerminal('press devday --help to show menu\n\r');
 
+ }
+
+ async function writeDanieL() {
+      await asyncTyped('', 500);
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('T: ', 50);
+      await asyncTyped('Thanks ', 150);
+      await asyncTyped('god, ', 150);
+      await asyncTyped(`it's `, 150);
+      await asyncTyped(`Dev `, 150);
+      await asyncTyped(`Day !`, 150);
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('F: ', 50);
+      await asyncTyped('Fun ', 150);
+      await asyncTyped('You ', 150);
+      await asyncTyped(`!?! `, 150);
+      await asyncTyped(`즐겁게 `, 550);
+      await asyncTyped(`참여하세요~ `, 550);
+      await asyncTyped(`(˵ ͡~ ͜ʖ ͡°˵)ﾉ`, 150);
+
+
+      await asyncTyped('\r\n', 150);
+      writeTerminal('\r\n');
+      writeTerminal('press devday --help to show menu\n\r');
  }
 
   const handleChangeCLI = useCallback((data) => {
