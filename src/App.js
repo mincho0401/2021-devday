@@ -103,7 +103,7 @@ function DevDayPage() {
         if (person === '' || person === '..') {
           writeNoSuchCd();
         } else {
-          writeCd();
+          writeVigli();
         }
         break;
       }
@@ -288,6 +288,38 @@ function DevDayPage() {
       writeTerminal('press devday --help to show menu\n\r');
 
   }
+
+  // Vigli 소감 작성
+ async function writeVigli() {
+
+      await asyncTyped('', 500);
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('Daniel', 50);
+      await asyncTyped(' bk', 200);
+      await asyncTyped(' Mincho', 200);
+      await asyncTyped(' Bong', 200);
+      await asyncTyped(' Nadia', 200);
+      await asyncTyped(' 본인', 150);
+      await asyncTyped(' 업무로', 150);
+      await asyncTyped(' 바쁜', 150);
+      await asyncTyped(' 와중에', 150);
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('재밌는', 150);
+      await asyncTyped(' 아이디어로', 150);
+      await asyncTyped(' 참여를', 150);
+      await asyncTyped(' 잘', 150);
+      await asyncTyped(' 해주셔서', 150);
+      await asyncTyped('\r\n', 150);
+      await asyncTyped('TF', 550);
+      await asyncTyped(' 진행', 550);
+      await asyncTyped(' 성공적', 550);
+      await asyncTyped(' (˵ ͡~ ͜ʖ ͡°˵)ﾉ', 150);
+
+      await asyncTyped('\r\n', 150);
+      writeTerminal('\r\n');
+      writeTerminal('press devday --help to show menu\n\r');
+
+ }
 
   const handleChangeCLI = useCallback((data) => {
     if (!enabled) {
