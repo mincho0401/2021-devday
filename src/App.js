@@ -161,9 +161,9 @@ function DevDayPage() {
 
     function writeLs() {
       writeTerminal('\r\n');
-      writeTerminal(`${colors.blue}bk               edgar               daniel`);
+      writeTerminal(`${colors.blue}bk               edgar               daniel               pablo`);
       writeTerminal('\r\n');
-      writeTerminal(`mincho           vigli               nadia${colors.white}`);
+      writeTerminal(`mincho           vigli               nadia                bong${colors.white}`);
       writeTerminal('\r\n');
     }
 
